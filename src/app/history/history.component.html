@@ -1,0 +1,53 @@
+<h1 class="heading">View By Email Id</h1>
+<hr>
+<br>
+<div>
+<div fxLayoutAlign = "center" fxFlexFill class="admin-div">
+    <mat-card fxFlex ="25"> 
+        <mat-toolbar color="primary">Enter email_id</mat-toolbar>
+        <form fxLayout= "column" class="login-div" [formGroup]="formGroup" (ngSubmit)= "historyProcess()">
+            <mat-form-field>
+                
+              <input matInput placeholder="Email Id" formControlName="email_id">
+            </mat-form-field>
+          <button mat-raised-button type="submit">Submit</button>
+            <br>
+
+        </form>
+         </mat-card>
+         </div>
+<hr>
+<div class="divtable">
+<table class="tablestyle">
+    <tr>
+        <th *ngFor = "let column of headers">
+            {{column}}
+        </th>
+        <th>Download</th>
+        <th>Cancel</th>
+    </tr>
+    <tr *ngFor = " let row of ticket">
+        <td>{{row.pnr}}</td>
+        <td>{{row.airlineName}}</td>
+        <td>{{row.emailId}}</td>
+        <td>{{row.endTimeStamp}}</td> 
+        <td>{{row.flightNo}}</td>
+        <td>{{row.fromPlace}}</td>
+        <td>{{row.meal}}</td>
+        <td> {{row.startTimeStamp}}</td>
+        <td>{{row.ticketCost}}</td>
+        <td>{{row.toPlace}}</td>
+        <td>{{row.totalCost}}</td>
+        <td>{{row.totalSeat}}</td> 
+        <td>{{row.userName}}</td> 
+        <td>
+            <button mat-raised-button type="submit">Download</button>
+            </td>
+            <td>
+            <button mat-raised-button type="submit" (click)="cancelProcess()">Cancel</button>
+
+</td>
+    </tr>
+</table>
+</div>
+</div>

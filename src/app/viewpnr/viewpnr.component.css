@@ -1,0 +1,26 @@
+.admin-div mat-card{
+    padding: 0px;
+}
+.login-div
+{
+    padding: 20px;
+}
+
+.heading{
+    text-align: center;
+    color:black;
+    font-weight: bold;
+    font-family: 2em;
+    background-color: ivory;
+}
+.tablestyle{
+    column-rule-style: groove;
+    column-rule-color: cornsilk;
+    color:white;
+    border-spacing: 30px 15px;
+
+    background-color:black;
+    
+}
+.divtable{
+ padding-left: 10%;}

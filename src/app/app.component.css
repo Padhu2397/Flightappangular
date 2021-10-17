@@ -1,0 +1,22 @@
+body {
+    background-image: url("https://ak3.picdn.net/shutterstock/videos/9169103/thumb/6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headerclass {
+        text-align: center;
+        background: grey;
+        color: black;
+        font-weight: bolder;
+        font-family: Cambria;
+        font-size: 4em;
+        text-align: center;
+        height: 15%;
+        padding-top: -10px;  
+      } 
+
+.train{
+  height: 100px;
+  width: 100px;
+}

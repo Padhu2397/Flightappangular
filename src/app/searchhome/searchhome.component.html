@@ -1,0 +1,52 @@
+<div>
+<div fxLayoutAlign = "center center " fxFlexFill class="admin-div">
+    <mat-card fxFlex ="25"> 
+        <mat-toolbar color="primary">Search Flight</mat-toolbar>
+        <form fxLayout= "column" class="login-div" [formGroup]="formGroup" (ngSubmit)= "searchProcess()">
+            <mat-form-field>
+                
+              <input matInput placeholder="From Place" formControlName="fromPlace">
+            </mat-form-field>
+          
+            <mat-form-field >
+                <input matInput type = "To Place" formControlName="toPlace">
+            </mat-form-field>
+
+            <mat-form-field >
+                <input matInput placeholder="Start Date"  formControlName="startDate">
+            </mat-form-field>
+            <button mat-raised-button type="submit">search</button>
+            <br>
+        </form>
+         </mat-card>
+</div>
+<div class="divtable">
+    <table class="tablestyle">
+        <tr>
+            <th *ngFor = "let column of headers">
+                {{column}}
+            </th>
+            <th>Book</th>
+        </tr>
+        <tr *ngFor = " let row of book">
+               
+
+            <td>{{row.flightNo}}</td>
+            <td>{{row.airlineName}}</td>
+            <td>{{row.fromPlace}}</td>
+            <td>{{row.toPlace}}</td> 
+            <td>{{row.startTimeStamp}}</td>
+            <td>{{row.endTimeStamp}}</td>
+            <td>{{row.businessSeat}}</td>
+            <td> {{row.nBusinessSeat}}</td>
+            <td>{{row.ticketCost}}</td>
+            <td>{{row.meal}}</td>
+
+                <td>
+                <button mat-raised-button type="submit" (click)="bookProcess()">Book</button>
+    
+    </td>
+        </tr>
+    </table>
+    </div>
+    </div>

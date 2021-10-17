@@ -1,0 +1,10 @@
+.profile{
+    float: left;
+        width: 33%;
+        text-align: center ;
+        padding-top: 200px;
+    }
+    .round{
+        border-radius: 50%;
+
+    }
